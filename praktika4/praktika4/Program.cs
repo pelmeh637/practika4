@@ -1,26 +1,29 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+
 class Program
 {
   static void Main(string[] args)
   {
-    ArrayList myList = new ArrayList
+    Queue queue = new Queue();
+
+    queue.Enqueue("First"); queue.Enqueue("Second"); queue.Enqueue("Third"); queue.EnqueueC'Fourth");
+  while (queue.Count > 0)
+      Stack stack = new Stack();
+    Stack.Push("First");
+    stack.Push("Second");
+    stack.Push("Third");
+    stack.Push("Fourth");
+    while (stack.Count > 0)
     {
-      "First",
-      "Second",
-      "Third",
-      "Fourth"
-    }; foreach (string item in myList)
-    {
-      Console.WriteLine("Unsorted: {0}", item);
+      object obj = stack.Pop();
+      Console.WriteLine("'From Stack: {0}", obj);
     }
-    // Сортировка при помощи стандартного объекта сравнения 
-    myList.Sort();
-    foreach (string item in myList)
+
     {
-      Console.WriteLine("   Sorted: {0}", item);
+      object obj = queue.Dequeue();
+      Console.WriteLine("From Queue: {0}", obj);
+
     }
   }
 }
-
-
